@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <section>
+                <header class="header">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <form name="empForm">
+                                <table>
+                                    <tr>
+                                        <th colspan="2">Register Employee</th>
+                                    </tr>
+                                    <tr>
+                                        <td>FirstName:</td>
+                                        <td>
+                                            <input id="firstName" name="firstName">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>LastName:</td>
+                                        <td>
+                                            <input id="lastName" name="lastName">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gender:</td>
+                                        <td>
+                                            <input id="gender" name="gender">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Date of Birth:</td>
+                                        <td>
+                                            <input id="dateOfBirth" name="dateOfBirth">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Department:</td>
+                                        <td>
+                                            <input id="department" name="department">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <button type="button" (click)="createEmployee()" class="blue-button">submit</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+            </section>
+            <section class="main">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Date of Birth</th>
+                            <th>Department</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let employee of employees">
+                            <td scope="row">{{employee.id}}</td>
+                            <td>{{employee.firstName}}</td>
+                            <td>{{employee.lastName}}</td>
+                            <td>{{employee.gender}}</td>
+                            <td>{{employee.datetOfBirth}}</td>
+                            <td>{{employee.department}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+</div>
